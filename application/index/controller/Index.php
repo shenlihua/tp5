@@ -5,6 +5,12 @@ class Index
 {
     public function index()
     {
+//        dump(config('database'));
+        $db=DB();
+        $db->name('jobs');
+        $data=$db->select();
+        dump($data);
+        dump(DB());
         echo 123;exit;
 //        $data=array(
 //            'attr1' =>  'value1',
